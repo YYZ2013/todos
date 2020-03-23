@@ -1,0 +1,165 @@
+html,body{
+	padding: 0;
+	margin: 0;
+}
+button{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	appearance: none;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body{
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background-color: #f5f5f5;
+	color: #4d4d4d;
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+}
+:focus{
+	outline: 0;		/* 当元素获得焦点的时候，焦点框为0*/
+}
+
+.todoapp{
+	background: #fff;
+	margin: 130px 0 40px 0;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),
+				0 25px 50px 0 rgba(0,0,0,0.1);
+}
+.header input::input-placeholder{
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+.header input::-webkit-input-placeholder{
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+.header input::-ms-input-placeholder{
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+.header .title{
+	position: absolute;
+	top: -155px;
+	left: 125px;
+	font-size: 100px;
+	font-weight: 100;
+	text-align: center;
+	color: rgba(175, 47, 47, 0.15);
+	text-rendering: optimizeLegibility;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+}
+.header .new-todo{
+	position: relative;
+	padding: 16px 16px 16px 60px;
+	margin: 0;
+	border: none;
+	width: 100%;
+	font-size: 24px;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4em;
+	color: inherit;
+	background: rgba(0, 0, 0, 0.003);
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+	/* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+	通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。 */
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.main{
+	position: relative;
+	border-top: 1px solid #e6e6e6;
+	z-index: 2;
+}
+.main .todo-list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.main .todo-list li{
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #ededed;
+}
+.main .todo-list li:last-child{
+	border-bottom: none;
+}
+.toggle{
+	text-align: center;
+	width: 40px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	border: none;
+	appearance: none;
+	-webkit-appearance: none;
+	opacity: 0;
+}
+.toggle + label{
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+.toggle:checked + label{
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
+}
+label{
+	word-break: break-all;
+	padding: 15px 15px 15px 60px;
+	display: block;
+	line-height: 1.2em;
+}
+.destory{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	margin: auto 0;
+	color: #cc9a9a;
+	font-size: 30px;
+	transition: color 0.2s ease-out;
+}
+.destory:hover{
+	color: #af5b5e;
+}
+.destory::after{
+	content: '×';
+}
+li:hover .destory{
+	display: block;
+}
+
+.footer {
+	margin: 60px auto 0;
+	color: silver;
+	font-size: 12px;
+	text-align: center;
+}
+.footer p {
+	line-height: 1em;
+}
